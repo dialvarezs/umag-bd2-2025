@@ -94,7 +94,7 @@ erDiagram
 
 10. Mostrar el historial completo de pedidos incluyendo: nombre del cliente, fecha del pedido, título del libro, cantidad y precio unitario.
 
-11. Contar cuántos libros hay en cada categoría.
+11. Mostrar los autores que han escrito libros en más de una categoría.
 
 12. Calcular el valor total del inventario (precio × stock) por categoría.
 
@@ -128,7 +128,7 @@ erDiagram
 
 27. Mostrar los 5 libros más vendidos con cantidad total y ingresos generados.
 
-28. Identificar los clientes que han gastado más de $100 en total.
+28. Mostrar los libros que nunca han sido vendidos.
 
 29. Mostrar los libros con stock bajo (menos de 10 unidades).
 
