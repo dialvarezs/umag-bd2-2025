@@ -1,4 +1,4 @@
-# 15 Ejercicios de Python
+# Ejercicios de Python básico
 
 **1.** Crea una función `analizar_ventas(ventas_mensuales)` que reciba un diccionario de ventas:
 
