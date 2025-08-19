@@ -37,14 +37,15 @@ class Punto:
         else:
             return False
     
-    def suma_coordenadas(self, coordenada_2):
-        return self.x + coordenada_2.x, self.y + coordenada_2.y
+    def __add__(self, coordenada2):
+        return Punto(self.x + coordenada2.x, self.y + coordenada2.y)
     
 p1 = Punto(3, 4)  
 p2 = Punto(1, 2)   
 p3 = Punto(3, 4)
 
 print(p1)
-print(p1.suma_coordenadas(p2))
+suma = p1 + p2
+print(suma) 
 print(p1.distancia_origen())
-print(p1.igual_coordenadas(p2))   
+print(p1.igual_coordenadas(p3))   
