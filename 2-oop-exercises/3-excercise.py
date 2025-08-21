@@ -1,5 +1,5 @@
 
-class Employes:
+class Employee:
     def __init__(self,name,last_name,social_number,initial_salary=0):
         self.name = name
         self.last_name = last_name
@@ -12,7 +12,7 @@ class Employes:
     def __str__(self):
         return f"Employe details - Name : {self.name} ; Last Name : {self.last_name} ; Social Number : {self.social_number} ; Salary : {self.salary}"
 
-class Seller(Employes):
+class Seller(Employee):
     def __init__(self,name,last_name,social_number,initial_salary,commissions=None):
         super().__init__(name,last_name,social_number,initial_salary)
 
@@ -27,10 +27,10 @@ class Seller(Employes):
     def calculate_salary(self):
         total_commissions = sum(self.commissions)
         self.salary += total_commissions
-        return f"{self.salary}"
+        return self.salary
 
 
-class Manager(Employes):
+class Manager(Employee):
     def __init__(self,name,last_name,social_number,initial_salary,manager_bonus):
         super().__init__(name,last_name,social_number,initial_salary)
         self.manager_bonus = manager_bonus
