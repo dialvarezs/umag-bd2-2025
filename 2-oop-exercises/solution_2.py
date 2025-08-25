@@ -1,10 +1,41 @@
+# Crea una clase `CuentaBancaria` con:
+# - `titular` (string)
+# - `_saldo` (float, protegido)
+# - `_numero_cuenta` (string, protegido)
+
+# Métodos:
+# - `__init__(self, titular, numero_cuenta, saldo_inicial=0)`
+# - `depositar(self, monto)` - agrega dinero al saldo
+# - `retirar(self, monto)` - quita dinero si hay suficiente saldo
+# - `obtener_saldo(self)` - retorna el saldo actual
+# - `transferir(self, cuenta_destino, monto)` - transfiere dinero a otra cuenta
+# - `__str__(self)` - retorna información de la cuenta en formato legible
+
 class CuentaBancaria:
+    """Representa una cuenta bancaria con operaciones básicas.
+    
+    Attributes:
+        titular: Nombre del titular de la cuenta.
+        saldo: Saldo actual de la cuenta.
+    """
     def __init__(self, titular, numero_cuenta, saldo_inicial=0):
+        """Inicializa una nueva cuenta bancaria.
+        
+        Args:
+            titular: Nombre del titular.
+            numero_cuenta: Número único de la cuenta.
+            saldo_inicial: Saldo inicial (por defecto 0).
+        """
         self.titular = titular
         self.__numero_cuenta = numero_cuenta
         self.saldo = saldo_inicial
 
     def depositar(self, monto):
+        """Deposita dinero en la cuenta.
+        
+        Args:
+            monto: Cantidad a depositar.
+        """
         if monto > 0:
             self.saldo += monto
             print(f"Depósito realizado: {monto}. Saldo actual: {self.saldo}.")
@@ -12,6 +43,11 @@ class CuentaBancaria:
             print("La cantidad a depositar debe ser positiva.")
 
     def retirar(self, monto):
+        """Retira dinero de la cuenta.
+        
+        Args:
+            monto: Cantidad a retirar.
+        """
         if 0 < monto <= self.saldo:
             self.saldo -= monto
             print(f"Retiro realizado: {monto}. Saldo actual: {self.saldo}.")
@@ -19,9 +55,20 @@ class CuentaBancaria:
             print("Fondos insuficientes o cantidad inválida para retirar.")
 
     def obtener_saldo(self):
+        """Obtiene el saldo actual de la cuenta.
+        
+        Returns:
+            El saldo actual.
+        """
         return self.saldo
 
     def transferir(self, cuenta_destino, monto):
+        """Transfiere dinero a otra cuenta.
+        
+        Args:
+            cuenta_destino: Cuenta de destino.
+            monto: Cantidad a transferir.
+        """
         if 0 < monto <= self.saldo:
             self.saldo -= monto
             cuenta_destino.saldo += monto
@@ -32,10 +79,19 @@ class CuentaBancaria:
             print("Fondos insuficientes o cantidad inválida para transferir.")
 
     def obtener_numero_cuenta(self):
-        """Método para acceder al número de cuenta de forma controlada"""
+        """Obtiene el número de cuenta de forma controlada.
+        
+        Returns:
+            El número de cuenta.
+        """
         return self.__numero_cuenta
 
     def __str__(self):
+        """Representación en cadena de la cuenta.
+        
+        Returns:
+            Cadena con información de la cuenta.
+        """
         return f"Cuenta de {self.titular} (Número: {self.__numero_cuenta}) - Saldo: {self.saldo}"
 
 
