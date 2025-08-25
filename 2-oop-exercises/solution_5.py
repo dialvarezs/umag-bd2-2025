@@ -23,18 +23,20 @@
 # for vehiculo in vehiculos:
 #     probar_vehiculo(vehiculo)
 
+
 class Vehiculo:
     def __init__(self, marca, modelo, año):
         self.marca = marca
         self.modelo = modelo
         self.año = año
-    
+
     def arrancar(self):
         print(f"El vehículo esta arrancando")
-    
+
     def __str__(self):
         return f"Marca: {self.marca}, Modelo: {self.modelo}, Año: {self.año}"
-    
+
+
 class Auto(Vehiculo):
     def __init__(self, marca, modelo, año, num_puertas):
         super().__init__(marca, modelo, año)
@@ -42,6 +44,7 @@ class Auto(Vehiculo):
 
     def arrancar(self):
         print("El auto esta arrancando")
+
 
 class Motocicleta(Vehiculo):
     def __init__(self, marca, modelo, año, cilindrada):
@@ -51,9 +54,11 @@ class Motocicleta(Vehiculo):
     def arrancar(self):
         print("La motocicleta esta arrancadando")
 
+
 def probar_vehiculo(vehiculo):
     vehiculo.arrancar()
     print(vehiculo)
+
 
 auto = Auto("Toyota", "Corolla", 2020, 4)
 moto = Motocicleta("Honda", "CBR", 2021, 600)

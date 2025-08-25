@@ -10,22 +10,24 @@ class CuentaBancaria:
             print(f"Depósito realizado: {monto}. Saldo actual: {self.saldo}.")
         else:
             print("La cantidad a depositar debe ser positiva.")
-        
+
     def retirar(self, monto):
         if 0 < monto <= self.saldo:
             self.saldo -= monto
             print(f"Retiro realizado: {monto}. Saldo actual: {self.saldo}.")
         else:
             print("Fondos insuficientes o cantidad inválida para retirar.")
-        
+
     def obtener_saldo(self):
         return self.saldo
-        
+
     def transferir(self, cuenta_destino, monto):
         if 0 < monto <= self.saldo:
             self.saldo -= monto
             cuenta_destino.saldo += monto
-            print(f"Transferencia de {monto} a {cuenta_destino.titular} realizada. Saldo actual: {self.saldo}.")
+            print(
+                f"Transferencia de {monto} a {cuenta_destino.titular} realizada. Saldo actual: {self.saldo}."
+            )
         else:
             print("Fondos insuficientes o cantidad inválida para transferir.")
 
@@ -35,6 +37,7 @@ class CuentaBancaria:
 
     def __str__(self):
         return f"Cuenta de {self.titular} (Número: {self.__numero_cuenta}) - Saldo: {self.saldo}"
+
 
 cuenta1 = CuentaBancaria("Ana García", "123456789", 100000)
 cuenta2 = CuentaBancaria("Carlos López", "987654321", 50000)

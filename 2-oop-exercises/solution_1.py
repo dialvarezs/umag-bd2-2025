@@ -3,10 +3,10 @@ class Producto:
         self.nombre = nombre
         self.precio = precio
         self.stock = stock
-    
+
     def mostrar_info(self):
         print(f"Producto: {self.nombre}, Precio: {self.precio}, Stock: {self.stock}")
-    
+
     def aplicar_descuento(self, porcentaje):
         descuento = self.precio * (porcentaje / 100)
         self.precio -= descuento
@@ -17,7 +17,10 @@ class Producto:
             self.stock -= cantidad
             print(f"Vendidos {cantidad} de {self.nombre}. Stock restante: {self.stock}")
         else:
-            print(f"No hay suficiente stock para vender {cantidad} de {self.nombre}. Stock actual: {self.stock}")
+            print(
+                f"No hay suficiente stock para vender {cantidad} de {self.nombre}. Stock actual: {self.stock}"
+            )
+
 
 producto = Producto("Laptop", 800000, 5)
 producto.mostrar_info()
