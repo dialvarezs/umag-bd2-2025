@@ -15,17 +15,19 @@
 
 # Crea una función `probar_vehiculo(vehiculo)` que funcione con cualquier tipo de vehículo.
 
+
 class Vehiculo:
     """Clase base para vehículos.
-    
+
     Attributes:
         marca: Marca del vehículo.
         modelo: Modelo del vehículo.
         año: Año de fabricación.
     """
+
     def __init__(self, marca, modelo, año):
         """Inicializa un vehículo.
-        
+
         Args:
             marca: Marca del vehículo.
             modelo: Modelo del vehículo.
@@ -41,7 +43,7 @@ class Vehiculo:
 
     def __str__(self):
         """Representación en cadena del vehículo.
-        
+
         Returns:
             Información del vehículo.
         """
@@ -50,13 +52,14 @@ class Vehiculo:
 
 class Auto(Vehiculo):
     """Auto que extiende Vehiculo.
-    
+
     Attributes:
         num_puertas: Número de puertas.
     """
+
     def __init__(self, marca, modelo, año, num_puertas):
         """Inicializa un auto.
-        
+
         Args:
             marca: Marca del auto.
             modelo: Modelo del auto.
@@ -73,13 +76,14 @@ class Auto(Vehiculo):
 
 class Motocicleta(Vehiculo):
     """Motocicleta que extiende Vehiculo.
-    
+
     Attributes:
         cilindrada: Cilindrada de la motocicleta.
     """
+
     def __init__(self, marca, modelo, año, cilindrada):
         """Inicializa una motocicleta.
-        
+
         Args:
             marca: Marca de la motocicleta.
             modelo: Modelo de la motocicleta.
@@ -96,7 +100,7 @@ class Motocicleta(Vehiculo):
 
 def probar_vehiculo(vehiculo):
     """Prueba cualquier tipo de vehículo.
-    
+
     Args:
         vehiculo: Instancia de vehículo a probar.
     """

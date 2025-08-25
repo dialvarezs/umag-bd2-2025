@@ -14,121 +14,136 @@
 # - Atributo adicional: `bono_gerencial` (porcentaje)
 # - Su `calcular_sueldo()` debe incluir: sueldo base + (sueldo base * bono/100)
 
-class Employee:
-    """Representa un empleado con información básica.
-    
-    Attributes:
-        name: Nombre del empleado.
-        last_name: Apellido del empleado.
-        social_number: Número de identificación social.
-        salary: Salario del empleado.
-    """
-    def __init__(self, name, last_name, social_number, initial_salary=0):
-        """Inicializa una nueva instancia de Employee.
-        
-        Args:
-            name: Nombre del empleado.
-            last_name: Apellido del empleado.
-            social_number: Número de identificación social.
-            initial_salary: Salario inicial (por defecto 0).
-        """
-        self.name = name
-        self.last_name = last_name
-        self.social_number = social_number
-        self.salary = initial_salary
 
-    def calculate_salary(self):
+class Empleado:
+    """Representa un empleado con información básica.
+
+    Attributes:
+        nombre: Nombre del empleado.
+        apellido: Apellido del empleado.
+        rut: Número de identificación social.
+        sueldo_base: Salario del empleado.
+    """
+
+    def __init__(self, nombre, apellido, rut, sueldo_base=0):
+        """Inicializa una nueva instancia de Empleado.
+
+        Args:
+            nombre: Nombre del empleado.
+            apellido: Apellido del empleado.
+            rut: Número de identificación social.
+            sueldo_base: Salario inicial (por defecto 0).
+        """
+        self.nombre = nombre
+        self.apellido = apellido
+        self.rut = rut
+        self.sueldo_base = sueldo_base
+
+    def calcular_sueldo(self):
         """Calcula el salario del empleado.
-        
+
         Returns:
             El salario calculado.
         """
-        return self.salary
+        return self.sueldo_base
 
     def __str__(self):
         """Representación en cadena del empleado.
-        
+
         Returns:
             Cadena con detalles del empleado.
         """
-        return f"Employe details - Name : {self.name} ; Last Name : {self.last_name} ; Social Number : {self.social_number} ; Salary : {self.salary}"
+        return (
+            f"Detalles del empleado - Nombre: {self.nombre} ; Apellido: {self.apellido} ; "
+            + "RUT: {self.rut} ; Sueldo: {self.sueldo_base}"
+        )
 
 
-class Seller(Employee):
+class Vendedor(Empleado):
     """Representa un vendedor con comisiones.
-    
+
     Attributes:
-        commissions: Lista de comisiones ganadas.
+        nombre: Nombre del empleado.
+        apellido: Apellido del empleado.
+        rut: Número de identificación social.
+        sueldo_base: Salario del empleado.
+        comisiones: Lista de comisiones ganadas.
     """
-    def __init__(self, name, last_name, social_number, initial_salary, commissions=None):
-        """Inicializa una nueva instancia de Seller.
-        
-        Args:
-            name: Nombre del vendedor.
-            last_name: Apellido del vendedor.
-            social_number: Número de identificación social.
-            initial_salary: Salario inicial.
-            commissions: Lista inicial de comisiones (por defecto None).
-        """
-        super().__init__(name, last_name, social_number, initial_salary)
 
-        if commissions is None:
-            self.commissions = []
+    def __init__(self, nombre, apellido, rut, sueldo_base, comisiones=None):
+        """Inicializa una nueva instancia de Vendedor.
+
+        Args:
+            nombre: Nombre del vendedor.
+            apellido: Apellido del vendedor.
+            rut: Número de identificación social.
+            sueldo_base: Salario inicial.
+            comisiones: Lista inicial de comisiones (por defecto None).
+        """
+        super().__init__(nombre, apellido, rut, sueldo_base)
+
+        if comisiones is None:
+            self.comisiones = []
         else:
-            self.commissions = commissions
+            self.comisiones = comisiones
 
-    def add_commission(self, amount):
+    def agregar_comision(self, monto):
         """Añade una comisión a la lista.
-        
-        Args:
-            amount: Monto de la comisión.
-        """
-        self.commissions.append(amount)
 
-    def calculate_salary(self):
+        Args:
+            monto: Monto de la comisión.
+        """
+        self.comisiones.append(monto)
+
+    def calcular_sueldo(self):
         """Calcula el salario incluyendo comisiones.
-        
+
         Returns:
             El salario total con comisiones.
         """
-        total_commissions = sum(self.commissions)
-        self.salary += total_commissions
-        return self.salary
+        total_comisiones = sum(self.comisiones)
+        self.sueldo_base += total_comisiones
+        return self.sueldo_base
 
 
-class Manager(Employee):
+class Gerente(Empleado):
     """Representa un gerente con bonificación.
-    
+
     Attributes:
-        manager_bonus: Porcentaje de bonificación gerencial.
+        nombre: Nombre del empleado.
+        apellido: Apellido del empleado.
+        rut: Número de identificación social.
+        sueldo_base: Salario del empleado.
+        bono_gerencial: Porcentaje de bonificación gerencial.
     """
-    def __init__(self, name, last_name, social_number, initial_salary, manager_bonus):
-        """Inicializa una nueva instancia de Manager.
-        
+
+    def __init__(self, nombre, apellido, rut, sueldo_base, bono_gerencial):
+        """Inicializa una nueva instancia de Gerente.
+
         Args:
             name: Nombre del gerente.
-            last_name: Apellido del gerente.
-            social_number: Número de identificación social.
-            initial_salary: Salario inicial.
-            manager_bonus: Porcentaje de bonificación gerencial.
+            apellido: Apellido del gerente.
+            rut: Número de identificación social.
+            sueldo_base: Salario inicial.
+            bono_gerencial: Porcentaje de bonificación gerencial.
         """
-        super().__init__(name, last_name, social_number, initial_salary)
-        self.manager_bonus = manager_bonus
+        super().__init__(nombre, apellido, rut, sueldo_base)
+        self.bono_gerencial = bono_gerencial
 
     def calculate_salary(self):
         """Calcula el salario con bonificación gerencial.
-        
+
         Returns:
             El salario con bonificación aplicada.
         """
-        self.salary = self.salary + (self.salary * (self.manager_bonus / 100))
-        return self.salary
+        self.sueldo_base = self.sueldo_base + (self.sueldo_base * (self.bono_gerencial / 100))
+        return self.sueldo_base
 
 
-seller = Seller("Juan", "Pérez", "12345678-9", 500000)
-seller.add_commission(50000)
-seller.add_commission(75000)
-print(f"Seller salary : {seller.calculate_salary()}")
+vendedor = Vendedor("Juan", "Pérez", "12345678-9", 500000)
+vendedor.agregar_comision(50000)
+vendedor.agregar_comision(75000)
+print(f"Vendedor salario : {vendedor.calcular_sueldo()}")
 
-manager = Manager("María", "González", "98765432-1", 800000, 25)
-print(f"Manager salary: {manager.calculate_salary()}")
+gerente = Gerente("María", "González", "98765432-1", 800000, 25)
+print(f"Gerente salario: {gerente.calcular_sueldo()}")

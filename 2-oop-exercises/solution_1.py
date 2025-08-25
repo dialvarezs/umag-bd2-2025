@@ -1,6 +1,6 @@
 # Crea una clase `Producto` con los siguientes atributos:
 # - `nombre` (string)
-# - `precio` (float) 
+# - `precio` (float)
 # - `stock` (int)
 
 # Implementa los métodos:
@@ -9,17 +9,19 @@
 # - `aplicar_descuento(self, porcentaje)` - reduce el precio según el porcentaje
 # - `vender(self, cantidad)` - reduce el stock si hay suficiente, sino imprime error
 
+
 class Producto:
     """Representa un producto con gestión de inventario.
-    
+
     Attributes:
         nombre: Nombre del producto.
         precio: Precio del producto.
         stock: Cantidad en inventario.
     """
+
     def __init__(self, nombre, precio, stock):
         """Inicializa una nueva instancia de Producto.
-        
+
         Args:
             nombre: Nombre del producto.
             precio: Precio del producto.
@@ -35,7 +37,7 @@ class Producto:
 
     def aplicar_descuento(self, porcentaje):
         """Aplica un descuento al precio del producto.
-        
+
         Args:
             porcentaje: Porcentaje de descuento a aplicar.
         """
@@ -45,7 +47,7 @@ class Producto:
 
     def vender(self, cantidad):
         """Vende una cantidad especificada del producto.
-        
+
         Args:
             cantidad: Cantidad de productos a vender.
         """

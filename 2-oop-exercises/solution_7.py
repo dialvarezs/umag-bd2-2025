@@ -9,80 +9,80 @@
 
 class Inventario:
     """Representa un inventario de productos que se comporta como un diccionario.
-    
+
     Permite gestionar productos con sus precios y cantidades de forma similar
     a un diccionario, con métodos adicionales para cálculos de inventario.
     """
-    
+
     def __init__(self):
         """Inicializa un inventario vacío."""
         self._productos = {}
-    
+
     def __getitem__(self, nombre_producto):
         """Permite acceso a productos usando corchetes.
-        
+
         Args:
             nombre_producto: Nombre del producto a buscar.
-        
+
         Returns:
             Diccionario con precio y cantidad del producto.
-        
+
         Raises:
             KeyError: Si el producto no existe.
         """
         return self._productos[nombre_producto]
-    
+
     def __setitem__(self, nombre_producto, datos_producto):
         """Permite asignar productos usando corchetes.
-        
+
         Args:
             nombre_producto: Nombre del producto.
             datos_producto: Diccionario con 'precio' y 'cantidad'.
         """
         self._productos[nombre_producto] = datos_producto
-    
+
     def __len__(self):
         """Retorna la cantidad de productos en el inventario.
-        
+
         Returns:
             Número de productos diferentes en el inventario.
         """
         return len(self._productos)
-    
+
     def __str__(self):
         """Representación en cadena del inventario.
-        
+
         Returns:
             Cadena mostrando todo el inventario.
         """
         if not self._productos:
             return "Inventario vacío"
-        
+
         resultado = "Inventario:\n"
         for nombre, datos in self._productos.items():
             resultado += f"- {nombre}: ${datos['precio']} (cantidad: {datos['cantidad']})\n"
         return resultado.rstrip()
-    
+
     def valor_total(self):
         """Calcula el valor total del inventario.
-        
+
         Returns:
             Valor total (precio × cantidad de todos los productos).
         """
         total = 0
         for datos in self._productos.values():
-            total += datos['precio'] * datos['cantidad']
+            total += datos["precio"] * datos["cantidad"]
         return total
-    
+
     def productos_disponibles(self):
         """Retorna productos con cantidad mayor a 0.
-        
+
         Returns:
             Diccionario con productos que tienen cantidad > 0.
         """
         disponibles = {}
         for nombre, datos in self._productos.items():
-            if datos['cantidad'] > 0:
+            if datos["cantidad"] > 0:
                 disponibles[nombre] = datos
         return disponibles
 

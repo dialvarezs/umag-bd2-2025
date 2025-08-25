@@ -10,14 +10,15 @@ import math
 
 class Punto:
     """Representa un punto en el plano cartesiano.
-    
+
     Attributes:
         x: Coordenada x del punto.
         y: Coordenada y del punto.
     """
+
     def __init__(self, x, y):
         """Inicializa un punto.
-        
+
         Args:
             x: Coordenada x.
             y: Coordenada y.
@@ -27,7 +28,7 @@ class Punto:
 
     def __str__(self):
         """Representación en cadena del punto.
-        
+
         Returns:
             Cadena con las coordenadas del punto.
         """
@@ -35,10 +36,10 @@ class Punto:
 
     def __add__(self, other):
         """Suma dos puntos.
-        
+
         Args:
             other: Otro punto a sumar.
-        
+
         Returns:
             Nuevo punto con la suma de coordenadas.
         """
@@ -46,10 +47,10 @@ class Punto:
 
     def __eq__(self, other):
         """Compara si dos puntos son iguales.
-        
+
         Args:
             other: Otro punto a comparar.
-        
+
         Returns:
             True si los puntos tienen las mismas coordenadas.
         """
@@ -57,7 +58,7 @@ class Punto:
 
     def distancia_origen(self):
         """Calcula la distancia desde el punto al origen.
-        
+
         Returns:
             La distancia euclidiana al origen (0, 0).
         """

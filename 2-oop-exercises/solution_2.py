@@ -11,16 +11,18 @@
 # - `transferir(self, cuenta_destino, monto)` - transfiere dinero a otra cuenta
 # - `__str__(self)` - retorna información de la cuenta en formato legible
 
+
 class CuentaBancaria:
     """Representa una cuenta bancaria con operaciones básicas.
-    
+
     Attributes:
         titular: Nombre del titular de la cuenta.
         saldo: Saldo actual de la cuenta.
     """
+
     def __init__(self, titular, numero_cuenta, saldo_inicial=0):
         """Inicializa una nueva cuenta bancaria.
-        
+
         Args:
             titular: Nombre del titular.
             numero_cuenta: Número único de la cuenta.
@@ -32,7 +34,7 @@ class CuentaBancaria:
 
     def depositar(self, monto):
         """Deposita dinero en la cuenta.
-        
+
         Args:
             monto: Cantidad a depositar.
         """
@@ -44,7 +46,7 @@ class CuentaBancaria:
 
     def retirar(self, monto):
         """Retira dinero de la cuenta.
-        
+
         Args:
             monto: Cantidad a retirar.
         """
@@ -56,7 +58,7 @@ class CuentaBancaria:
 
     def obtener_saldo(self):
         """Obtiene el saldo actual de la cuenta.
-        
+
         Returns:
             El saldo actual.
         """
@@ -64,7 +66,7 @@ class CuentaBancaria:
 
     def transferir(self, cuenta_destino, monto):
         """Transfiere dinero a otra cuenta.
-        
+
         Args:
             cuenta_destino: Cuenta de destino.
             monto: Cantidad a transferir.
@@ -80,7 +82,7 @@ class CuentaBancaria:
 
     def obtener_numero_cuenta(self):
         """Obtiene el número de cuenta de forma controlada.
-        
+
         Returns:
             El número de cuenta.
         """
@@ -88,7 +90,7 @@ class CuentaBancaria:
 
     def __str__(self):
         """Representación en cadena de la cuenta.
-        
+
         Returns:
             Cadena con información de la cuenta.
         """
