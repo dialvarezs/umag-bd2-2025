@@ -87,7 +87,7 @@ Implementar clase `AnalizadorRendimiento`:
 - Incluir información de estudiante, prueba y calificación
 - Generar nombres de archivo automáticamente
 
-## Parte 4: Programa Principal (10 puntos)
+## Programa Principal
 
 Crear `main.py` que:
 1. Genere dataset completo de ejemplo
