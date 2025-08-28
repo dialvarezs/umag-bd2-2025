@@ -60,7 +60,7 @@ Crear un sistema para gestionar y analizar notas de estudiantes universitarios u
 - `nota_final: float` - Nota entre 1.0 y 7.0 (50% de exigencia)
 - `aprobado: bool` - True si nota >= 4.0
 
-## Parte 2: Generación de Datos con Faker (25 puntos)
+## Parte 2: Generación de Datos con Faker
 
 Implementar clase `GeneradorDatos`:
 
@@ -83,7 +83,7 @@ Implementar clase `GeneradorDatos`:
 - Calificaciones para muestra aleatoria de estudiantes
 - Distribuciones de notas realistas
 
-## Parte 3: Análisis de datos (35 puntos)
+## Parte 3: Análisis de datos
 
 Implementar clase `AnalizadorRendimiento`:
 
