@@ -45,7 +45,7 @@ Crear un sistema para gestionar y analizar notas de estudiantes universitarios u
 
 - `agregar_calificacion(calificacion: Calificacion)`
 - `guardar_notas_csv(archivo: str = None) -> str` - Usar pandas para exportar a CSV
-- `obtener_estadisticas() -> dict` - Estadísticas básicas con pandas
+- `obtener_estadisticas() -> dict` - Estadísticas básicas con (promedio, nota mínima, nota máxnima)
 
 ### 1.4 Calificacion
 
