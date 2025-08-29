@@ -35,10 +35,8 @@ Crear un sistema para gestionar y analizar notas de estudiantes universitarios u
 - `id: int` - Identificador único
 - `nombre: str` - Nombre de la prueba
 - `materia: str` - Materia correspondiente
-- `tipo: str` - 'parcial', 'final', 'quiz', 'tarea'
 - `fecha: date` - Fecha de aplicación
 - `puntaje_maximo: float`
-- `peso_porcentual: float` - Peso 0-100
 - `calificaciones: list[Calificacion]`
 
 **Métodos requeridos:**
@@ -96,7 +94,7 @@ Implementar clase `AnalizadorRendimiento`:
 
 - `guardar_notas_csv()` debe usar pandas para crear DataFrame estructurado
 - Incluir información de estudiante, prueba y calificación
-- Generar nombres de archivo automáticamente
+- Generar nombres de archivo automáticamente si es que no se indica como parámetro
 
 ## Programa Principal
 
