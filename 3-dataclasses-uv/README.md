@@ -112,7 +112,7 @@ Crear `main.py` que:
 3. Actualmente el puntaje de la calificación no tiene en consideración el puntaje de la prueba, por lo que puede ser mayor. Corrige la implementación para que al ingresar calificaciones la puntuación obtenida no pueda superar la máxima de prueba.
 4. Añade validación en el constructor de Estudiante para verificar que el email termine con un dominio universitario válido (ej: @umag.cl).
 5. Implementa un método `obtener_estudiantes_por_carrera(codigo_carrera: str)` en GeneradorDatos que retorne todos los estudiantes de una carrera específica.
-6. Añade un método `calcular_promedio_estudiante(id_estudiante: int)` en AnalizadorRendimiento que calcule el promedio general de un estudiante específico.
+6. En la implementación actual, las calificaciones se generan como un atributo de la clase GeneradorDatos. Modifica la implementación para que se añadan a cada prueba, y que no sean un atributo de la clase GeneradorDatos en sí.
 7. Crea un método `obtener_pruebas_por_periodo(fecha_inicio: date, fecha_fin: date)` en GeneradorDatos para listar las pruebas en un rango de fechas determinado.
 8. Implementar `AnalizadorRendimiento.ranking_estudiantes()`.
 9. Implementar `AnalizadorRendimiento.analizar_materias()`.
