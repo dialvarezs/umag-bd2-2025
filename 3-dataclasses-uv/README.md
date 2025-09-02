@@ -104,3 +104,15 @@ Crear `main.py` que:
 2. Demuestre funcionamiento de todas las clases
 3. Exporte mínimo 2 archivos CSV
 4. Muestre análisis principales por pantalla
+
+## Extra
+
+1. Actualmente la materia para las pruebas se selecciona de una lista aleatoria general. Añade un atributo en Carrera que permita almacenar las materias específicas de cada carrera, y así poder hacer que las pruebas sean coherentes.
+2. Genera IDs aleatorios no correlativos para cada estudiante, verificando que el ID no esté utilizado al momento de crear un nuevo estudiante.
+3. Actualmente el puntaje de la calificación no tiene en consideración el puntaje de la prueba, por lo que puede ser mayor. Corrige la implementación para que al ingresar calificaciones la puntuación obtenida no pueda superar la máxima de prueba.
+4. Añade validación en el constructor de Estudiante para verificar que el email termine con un dominio universitario válido (ej: @umag.cl).
+5. Implementa un método `obtener_estudiantes_por_carrera(codigo_carrera: str)` en GeneradorDatos que retorne todos los estudiantes de una carrera específica.
+6. Añade un método `calcular_promedio_estudiante(id_estudiante: int)` en AnalizadorRendimiento que calcule el promedio general de un estudiante específico.
+8. Implementa validación de fechas en Estudiante para asegurar que fecha_ingreso sea posterior a fecha_nacimiento y no futura.
+9. Crea un método `obtener_pruebas_por_periodo(fecha_inicio: date, fecha_fin: date)` en GeneradorDatos para filtrar pruebas por rango de fechas.
+10. Añade un atributo `creditos` a la clase Prueba y modifica AnalizadorRendimiento para calcular promedios ponderados por créditos en lugar de promedios simples.
