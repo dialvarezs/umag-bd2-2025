@@ -16,7 +16,7 @@ class GeneradorDatos:
         pruebas (list[Prueba]): Conjunto de pruebas generadas.
         calificaciones (list[Calificacion]): Lista de calificaciones generadas.
         _materias (list[str]): Lista de nombres de asignaturas disponibles.
-        _fake (Faker): Generador de datos configurado para ``es_CL``.
+        _fake (Faker): Generador de datos configurado para `es_CL`.
     """
 
     def __init__(self, n_estudiantes=150, n_pruebas=30) -> None:
