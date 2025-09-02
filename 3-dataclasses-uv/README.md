@@ -116,4 +116,4 @@ Crear `main.py` que:
 7. Crea un método `obtener_pruebas_por_periodo(fecha_inicio: date, fecha_fin: date)` en GeneradorDatos para listar las pruebas en un rango de fechas determinado.
 8. Implementar `AnalizadorRendimiento.ranking_estudiantes()`.
 9. Implementar `AnalizadorRendimiento.analizar_materias()`.
-10. Añade un atributo a `Estudiante` que indique las materias que está cursando. Al ingresar calificaciones en las pruebas, verifica que cada prueba tenga al menos el 60% de los estudiantes inscritos.
+10. Añade un atributo a `Estudiante` que indique las materias que está cursando. Al ingresar calificaciones en las pruebas, verifica que cada prueba tenga al menos el 60% de los estudiantes inscritos y que cada estudiante sólo tenga una calificación por materia.
