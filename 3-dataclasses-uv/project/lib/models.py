@@ -155,13 +155,13 @@ class Calificacion:
         """Porcentaje obtenido respecto del puntaje máximo de la prueba.
 
         Returns:
-            float: Porcentaje en el rango 0–100.
+            float: Porcentaje en el rango 0-100.
         """
         return self.puntaje / self.prueba.puntaje_maximo * 100
 
     @property
     def nota_final(self) -> float:
-        """Nota final en escala 1.0–7.0 derivada del porcentaje obtenido.
+        """Nota final en escala 1.0-7.0 derivada del porcentaje obtenido.
 
         Se aplica una transformación lineal: ``1 + 6 * (porcentaje / 100)``.
 
