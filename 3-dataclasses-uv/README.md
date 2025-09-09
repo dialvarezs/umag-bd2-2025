@@ -8,7 +8,7 @@ Crear un sistema para gestionar y analizar notas de estudiantes universitarios u
 
 - Aplicar dataclasses para modelar datos estructurados
 - Usar `faker` para generar datasets realistas
-- Implementar análisis de datos con pandas
+- Implementar estadísticas básicas
 - Configurar proyecto con uv
 
 ## Parte 1: Modelado de Datos con Dataclasses
