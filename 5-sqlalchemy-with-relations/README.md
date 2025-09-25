@@ -33,11 +33,11 @@ Implementar un sistema de librería online usando SQLAlchemy.
 
 ## Parte 2: Agregar Datos
 
-Crear función que genere:
-- 3-4 categorías (Ficción, Ciencia, Historia)
-- 5-8 autores
-- 10-15 libros distribuidos entre categorías
-- 8-12 pedidos con nombres de clientes
+Crear función que genere al menos:
+- 3 categorías (Ficción, Ciencia, Historia)
+- 5 autores
+- 10 libros distribuidos entre categorías
+- 8 pedidos con nombres de clientes
 
 ## Parte 3: Modificar Datos
 
