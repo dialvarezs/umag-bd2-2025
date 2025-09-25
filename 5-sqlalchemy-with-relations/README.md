@@ -8,8 +8,7 @@ Implementar un sistema de librería online usando SQLAlchemy.
 
 - Crear modelos con relaciones usando SQLAlchemy
 - Agregar y modificar datos usando ORM
-- Realizar consultas equivalentes a los ejercicios SQL
-- Manejar sesiones y transacciones
+- Realizar consultas usando SQLAlchemy
 
 ## Parte 1: Modelos y Relaciones
 
