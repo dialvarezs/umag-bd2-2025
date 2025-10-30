@@ -1,6 +1,4 @@
-# Tarea Práctica: CRUD de Libros
-
-**Duración:** ~60 minutos
+# Tarea Práctica de Litestar + Advanced Alchemy: CRUD de Libros
 
 ## Objetivo
 
